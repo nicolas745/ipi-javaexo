@@ -1,6 +1,9 @@
 package ipi.ecoconception;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -66,7 +69,27 @@ public class Toolkit {
 			MaturityLevel value = level.getValue();
 			res += value.getScore();
 		}
+		if(levels.size()==0) {
+			return null;
+		}
 		res = res/levels.size();
 		return String.valueOf(res); 
+	}
+	public List<String> getDomainListOrderedByNumberOfGoodPractices() {
+		List<String> res = new ArrayList<>();
+		for(NbOfGpPerDomain nbOfGpPerDomain :nbOfGpPerDomains) {
+			res.add(nbOfGpPerDomain.getDomain());
+		}
+		Collections.sort(res, new Comparator<>() {
+
+			@Override
+			public int compare(String domain1, String domain2) {
+				// \\s+ permet de corrigé le probleme des double espace d'apres chatgpt 
+				int wordCount1 = domain1.split("\\s+").length;
+	            int wordCount2 = domain2.split("\\s+").length;
+				return  wordCount1 - wordCount2;
+			}
+		});
+		return res; 
 	}
 }
