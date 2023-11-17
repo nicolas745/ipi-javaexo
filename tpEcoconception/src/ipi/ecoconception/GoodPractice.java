@@ -1,8 +1,8 @@
 package ipi.ecoconception;
 
-public class GoddPractice {
+public class GoodPractice {
 	private String name,field;
-	public GoddPractice(String name,String field) {
+	public GoodPractice(String name,String field) {
 		this.field = field;
 		this.name = name;
 	}

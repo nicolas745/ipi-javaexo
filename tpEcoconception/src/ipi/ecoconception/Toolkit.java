@@ -8,23 +8,28 @@ import java.util.Map.Entry;
 import java.util.Random;
 
 public class Toolkit {
-	private Map<String, MaturityLevel> levels;
-	private List<GoddPractice> goodPractices;
-	private List<NbOfGpPerDomain> nbOfGpPerDomains;
-	private Random r;
-	private List<Tool> tools = new ArrayList<>();
-	public static void Toolkit() {
+	private static Map<String, MaturityLevel> levels;
+	private static List<GoodPractice> goodPractices;
+	private static List<NbOfGpPerDomain> nbOfGpPerDomains;
+	private static Random r;
+	private static List<Tool> tools = new ArrayList<>();
+	public Toolkit() {
+		initGoodPracties();
+		initLevels();
+		initGoodPracties();
+		initNbOfGPperDomain();
+		intiTools();
 	}
-	private void intiTools() {
-		tools= new ArrayList<Tool>();
+	private static void intiTools() {
+		tools= new ArrayList<>();
 	}
-	private void initLevels() {
+	private static void initLevels() {
 		levels = new HashMap<>();
 	}
-	private void initGoodPracties() {
+	private static void initGoodPracties() {
 		goodPractices= new ArrayList<>();
 	}
-	private void initNbOfGPperDomain() {
+	private static void initNbOfGPperDomain() {
 		nbOfGpPerDomains = new ArrayList<>();	
 	}
 	public List<String> getSomeToolNames(char c){
@@ -54,5 +59,14 @@ public class Toolkit {
 			}
 		}
 		return list;
+	}
+	public String getLevelScoreAverage() {
+		int res = 0;
+		for(Entry<String, MaturityLevel> level : levels.entrySet()) {
+			MaturityLevel value = level.getValue();
+			res += value.getScore();
+		}
+		res = res/levels.size();
+		return String.valueOf(res); 
 	}
 }
