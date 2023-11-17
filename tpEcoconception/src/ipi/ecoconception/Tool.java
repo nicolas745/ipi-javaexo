@@ -8,6 +8,13 @@ public class Tool {
 		return name;
 	}
 	public String getDesc() {
-		return getDesc();
+		return Description;
+	}
+	public void setDesc(String desc) {
+		this.Description = desc;
+	}
+
+	public void setname(String name) {
+		this.name = name;
 	}
 }
