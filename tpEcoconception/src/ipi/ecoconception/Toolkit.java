@@ -56,7 +56,19 @@ public class Toolkit {
 		goodPractices= new ArrayList<>();
 	}
 	private static void initNbOfGPperDomain() {
-		nbOfGpPerDomains = new ArrayList<>();	
+		nbOfGpPerDomains = new ArrayList<>();
+		NbOfGpPerDomain res = new NbOfGpPerDomain("Conception");
+		nbOfGpPerDomains.add(res );
+		res = new NbOfGpPerDomain("Production");
+		nbOfGpPerDomains.add(res );
+		res = new NbOfGpPerDomain("Maintenance et fin de vie");
+		nbOfGpPerDomains.add(res );
+		res = new NbOfGpPerDomain("Realisation");
+		nbOfGpPerDomains.add(res );
+		res = new NbOfGpPerDomain("Specification");
+		nbOfGpPerDomains.add(res );
+		res = new NbOfGpPerDomain("Utilisation");
+		nbOfGpPerDomains.add(res );
 	}
 	public List<String> getSomeToolNames(char c){
 		List<String> list = new ArrayList<>();

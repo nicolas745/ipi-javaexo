@@ -18,6 +18,6 @@ public class TookitUse {
     	LOGGER.info("Nom des des outils commenant par la lettre S : \n" + kit.getSomeToolNames('s'));
     	LOGGER.info("Nom des outils dont la description comporte le mot Evauation: \n"+ kit.getSomeToolsByWord("Evauation"));
     	LOGGER.info("Tests des méthodes concernant le nombre de bonnes pratiques par domaine");
-    	LOGGER.info("recupper les domain ordoner du pr \n"+ kit.getDomainListOrderedByNumberOfGoodPractices());
+    	LOGGER.info("recupper les domain ordoner du domain comportant le plus de bonnes pratique au domaine qui coomporte le moins: \n"+ kit.getDomainListOrderedByNumberOfGoodPractices());
     }
 }
