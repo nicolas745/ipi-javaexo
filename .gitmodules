@@ -3,3 +3,6 @@
 	url = https://github.com/nicolas745/2324-CDEV-JAVA250.git
 [submodule "a488e8f82901b16c4d5b9ae7238897d67bc18893"]
 	url = https://github.com/nicolas745/2324-CDEV-JAVA250.git
+[submodule "ipi-jva350-tptd"]
+	path = ipi-jva350-tptd
+	url = https://github.com/nicolas745/ipi-jva350-tptd.git
