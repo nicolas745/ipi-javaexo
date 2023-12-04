@@ -6,3 +6,6 @@
 [submodule "ipi-jva350-tptd"]
 	path = ipi-jva350-tptd
 	url = https://github.com/nicolas745/ipi-jva350-tptd.git
+[submodule "ipi-jva320-web-tptd"]
+	path = ipi-jva320-web-tptd
+	url = https://github.com/nicolas745/ipi-jva320-web-tptd.git
