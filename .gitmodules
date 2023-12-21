@@ -5,7 +5,7 @@
 	url = https://github.com/nicolas745/2324-CDEV-JAVA250.git
 [submodule "ipi-jva350-tptd"]
 	path = ipi-jva350-tptd
-	url = https://github.com/nicolas745/ipi-jva350-tptd.git
+	url = git@github.com:nicolas745/ipi-jva350-tptd.
 [submodule "ipi-jva320-web-tptd"]
 	path = ipi-jva320-web-tptd
 	url = git@github.com:nicolas745/ipi-jva320-web-tptd.git
